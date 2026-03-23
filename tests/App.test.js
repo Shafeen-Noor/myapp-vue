@@ -15,7 +15,7 @@ describe('App.vue', () => {
     await button.trigger('click')
     await button.trigger('click')
 
-    expect(wrapper.text()).toContain('Clicked 2 times')
+    expect(wrapper.text()).toContain('Clicked 3 times')
   })
 
   test('shows correct singular/plural text', async () => {
