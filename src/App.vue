@@ -1,33 +1,38 @@
 <script setup>
-import { counter } from './counter'
-const { count, increment } = counter()
+import ApodFetcher from './components/ApodFetcher.vue'
 </script>
 
 <template>
-  <h1>Vue+JS Counter</h1>
-  <button @click="increment">Clicked {{ count }} {{ count === 1 ? 'time' : 'times' }}</button>
+  <main>
+    <h1>Cosmic Explorer</h1>
+    <p class="subtitle">Pick a date. See what NASA photographed that day.</p>
+    <ApodFetcher />
+  </main>
 </template>
 
-<style scoped>
-h1 {
-  text-align: center;
-  margin-bottom: 16px;
-  color: #333;
+<style>
+body {
+  margin: 0;
+  background: #0a0a1a;
 }
 
-button {
-  display: block;
+main {
+  max-width: 720px;
   margin: 0 auto;
-  padding: 8px 16px;
-  font-size: 16px;
-  cursor: pointer;
-  border: 1px solid #333;
-  border-radius: 4px;
-  background-color: #fff;
-  color: #333;
+  padding: 2.5rem 1.25rem;
 }
 
-button:hover {
-  background-color: #f0f0f0;
+h1 {
+  font-family: Georgia, serif;
+  font-size: 2.2rem;
+  color: #c8b8ff;
+  margin-bottom: 0.25rem;
+}
+
+.subtitle {
+  font-family: Georgia, serif;
+  color: #666;
+  margin-top: 0;
+  margin-bottom: 2rem;
 }
 </style>
