@@ -1,5 +1,5 @@
 <script setup>
-import ApodFetcher from './components/ApodFetcher.vue'
+import ApodFetcher from './lib/components/ApodFetcher.vue'
 </script>
 
 <template>
