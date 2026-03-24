@@ -84,7 +84,7 @@ describe('ApodFetcher', () => {
     await fireEvent.click(screen.getByRole('button'))
 
     await waitFor(() => {
-      expect(screen.getByText(/nasa is down/i)).toBeInTheDocument()
+      expect(screen.getByText(/vasa is down/i)).toBeInTheDocument()
     })
   })
 })

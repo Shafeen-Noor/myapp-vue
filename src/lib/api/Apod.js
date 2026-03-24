@@ -3,7 +3,7 @@ const APOD_BASE_URL = 'https://api.nasa.gov/planetary/apod'
 
 export async function fetchAPOD(date) {
   const url = `${APOD_BASE_URL}?api_key=${NASA_API_KEY}&date=${date}`
-
+  const extraline = 'Test'
   const response = await fetch(url)
 
   if (!response.ok) {
