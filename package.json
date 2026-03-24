@@ -12,6 +12,7 @@
     "lint:oxlint": "oxlint . --fix",
     "lint:eslint": "eslint . --fix --cache",
     "format": "prettier --write --experimental-cli src/",
+    "format:check": "prettier --check --experimental-cli src/",
     "prepare": "husky",
     "test:browser": "vitest --config=vitest.browser.config.js"
   },
