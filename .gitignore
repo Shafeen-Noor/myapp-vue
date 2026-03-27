@@ -44,3 +44,5 @@ playwright-report/
 
 # Ignore VS Code settings folder
 .vscode/
+*storybook.log
+storybook-static

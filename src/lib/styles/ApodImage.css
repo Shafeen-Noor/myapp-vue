@@ -1,0 +1,15 @@
+.media {
+  width: 100%;
+  border-radius: 8px;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.image {
+  object-fit: cover;
+}
+
+.video {
+  height: 340px;
+  border: none;
+}
