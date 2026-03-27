@@ -4,8 +4,6 @@ import ApodFetcher from './lib/components/ApodFetcher.vue'
 
 <template>
   <main>
-    <h1>Cosmic Explorer</h1>
-    <p class="subtitle">Pick a date. See what NASA photographed that day.</p>
     <ApodFetcher />
   </main>
 </template>
