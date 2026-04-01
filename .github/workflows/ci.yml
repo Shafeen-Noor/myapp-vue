@@ -1,4 +1,4 @@
-name: 'CI workflow'
+name: CI workflow
 
 on:
   pull_request:
@@ -9,7 +9,6 @@ jobs:
   ci:
     name: Lint, Format and Test
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -18,7 +17,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: 'npm'
+          cache: npm
 
       - name: Install dependencies
         run: npm ci
@@ -28,3 +27,36 @@ jobs:
 
       - name: Check Format (no fix)
         run: npm run format:check
+
+      - name: Unit & Component Tests (Vitest)
+        run: npm run test
+
+  e2e:
+    name: E2E Tests (Playwright)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps
+
+      - name: Run Playwright tests
+        run: npm run e2e test
+
+      - name: Upload Playwright report
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: vue-playwright-report
+          path: playwright-report/
+          retention-days: 7

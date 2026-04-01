@@ -16,7 +16,8 @@
     "prepare": "husky",
     "test:browser": "vitest --config=vitest.browser.config.js",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "e2e": "npx playwright"
   },
   "dependencies": {
     "pinia": "^3.0.4",
@@ -25,10 +26,11 @@
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
-    "@playwright/test": "^1.58.2",
+    "@playwright/test": "^1.59.1",
     "@storybook/vue3-vite": "^10.3.3",
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/vue": "^8.1.0",
+    "@types/node": "^25.5.0",
     "@vitejs/plugin-vue": "^6.0.4",
     "@vitejs/plugin-vue-jsx": "^5.1.4",
     "@vitest/browser-playwright": "^4.1.0",
