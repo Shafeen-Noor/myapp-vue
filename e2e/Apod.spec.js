@@ -6,7 +6,7 @@ test.describe('APOD App', () => {
   })
 
   test('renders the header with title and eyebrow', async ({ page }) => {
-    await expect(page.getByText('NASA - Astornomy Picture of the Day')).toBeVisible()
+    await expect(page.getByText('NASA Astornomy Picture of the Day')).toBeVisible()
     await expect(page.getByRole('heading', { name: 'Explore Cosmos' })).toBeVisible()
   })
 
