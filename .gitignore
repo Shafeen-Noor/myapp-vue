@@ -46,3 +46,9 @@ playwright-report/
 .vscode/
 *storybook.log
 storybook-static
+
+# Playwright
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+/playwright/.auth/
