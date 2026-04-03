@@ -295,7 +295,7 @@ describe('ApodView', () => {
     await waitFor(() => expect(screen.queryByText(/contacting nasa/i)).not.toBeInTheDocument())
   })
 
-  it('re-fetches when a new date is selected and Receive Signal is clicked', async () => {
+  it('re-fetches when a new date is selected and Receive Signal button is clicked', async () => {
     fetchAPOD.mockResolvedValue(mockApod)
     render(ApodView)
     await waitFor(() => expect(fetchAPOD).toHaveBeenCalledTimes(1))
