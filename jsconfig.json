@@ -1,8 +1,10 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
+      "$lib/*": ["src/lib/*"],
+      "@apod/*": ["src/lib/components/Apod/*"]
     }
   },
-  "exclude": ["node_modules", "dist"]
+  "include": ["src/**/*"]
 }
