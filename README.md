@@ -1,4 +1,4 @@
-# Cosmos Observer — Vue
+# Cosmos Observer
 
 A deep-space observatory interface for browsing NASA's universe data. Navigate between two views — the Astronomy Picture of the Day and a live Asteroid Watch — using a persistent bottom navigation bar.
 
