@@ -2,6 +2,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
+      "$lib/*": ["src/lib/*"],
       "@apod/*": ["src/lib/components/Apod/*"]
     }
   },
